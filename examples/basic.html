@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Basic Example</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script type="text/javascript" src="jquery.min.js"></script>
+		<script type="text/javascript" src="../no-blinking-input.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				noBlinkingInput.newInstance({
+					debug:false
+				},function(e,val){
+					console.log("here",e,val)
+					if(val == ""){
+						$(".output").html("&nbsp;")
+						
+					} else {
+						$(".output").html(val)
+						
+					}
+				})
+			})
+		</script>
+		<style type="text/css">
+			.output {
+				opacity: 0.7;
+				background:rgba(255,255,255,.1);
+				margin: auto auto;
+				width: 200px;
+				position: relative;
+				top:200px;
+				text-align: center;
+				border-radius: 5px;
+				color: #fdfbfb;
+				height: 30px;
+				line-height: 30px;
+				font-weight: bold;
+			}
+			body{
+				background-color: #5a4f4f;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="output"> &nbsp;</div>
+	</body>
+</html>
