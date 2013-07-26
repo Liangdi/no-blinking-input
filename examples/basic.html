@@ -9,8 +9,8 @@
 			$(function(){
 				noBlinkingInput.newInstance({
 					debug:false
-				},function(e,val){
-					console.log("here",e,val)
+				},function(e,val,id){
+					console.log("value:",val," from id:",id)
 					if(val == ""){
 						$(".output").html("&nbsp;")
 						

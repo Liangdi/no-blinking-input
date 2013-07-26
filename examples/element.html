@@ -10,9 +10,8 @@
 				noBlinkingInput.newInstance({
 					context:$(".input"),
 					debug:false
-				},function(e,val,orgE){
-					console.log("here",e,val)
-					console.log("here",orgE)
+				},function(e,val,id){
+					console.log("value:",val," from id:",id)
 					if(val == ""){
 						$(".output").html("&nbsp;")
 						
